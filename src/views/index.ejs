@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/css/style.css' />
-  </head>
+
   <body>
-    <figure>
-      <img src="/img/logo-DH.png" alt="Logo Digital House">
-    </figure>
+  
+    <%- include("partials/header.ejs") %>
+
     <h1><%= title %></h1>
     <p>Bienvenidos a <%= title %></p>
+<div  class="boton-index">
+  <button><a href="/movies" class="boton">Mostrar listado de Película</a></button>
+</div>
+   <div class="boton-index" >
+    <button ><a href="/movies/add" class="boton">Ingresar Peículas</a></button>  
+
+   </div>
+   
   </body>
 </html>

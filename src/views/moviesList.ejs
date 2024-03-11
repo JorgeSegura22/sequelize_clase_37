@@ -15,13 +15,26 @@
     </figure>
     <h1>LISTADO DE PELÍCULAS</h1>
     <ul>
-        <% for( let i = 0; i < movies.length; i++ ) { %>
+        <h1>LISTADO DE PELÍCULAS</h1>
+<ul>
+    <% for(let i = 0; i < movies.length; i++) { %>
         <li>
-            <%if(movies[i].generos) {%>
-            <a href="/movies/detail/<%= movies[i].id %>"><%= movies[i].title %> - <%= movies[i].generos.name%></a>
+            <% if(movies[i].generos) { %>
+                <a href="/movies/detail/<%= movies[i].id %>"><%= movies[i].title %> - <%= movies[i].generos.name %></a>
+            <% } %>
+            <% if(movies[i].actors && movies[i].actors.length > 0) { %>
+                <ul>
+                    <% for(let j = 0; j < movies[i].actors.length; j++) { %>
+                        <li><%= movies[i].actors[j].first_name %> <%= movies[i].actors[j].last_name %></li>
+                    <% } %>
+                </ul>
+            <% } else { %>
+                <p>No hay actores asociados a esta película.</p>
             <% } %>
         </li>
-        <% } %>
+    <% } %>
+</ul>
+
 
     </ul>
 </body>

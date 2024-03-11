@@ -4,8 +4,14 @@
   padding: 0;
 }
 body {
+
+  display: flex;
+  justify-content: space-between;
+  align-items:start;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+  border: 2px solid red;
 }
 
 a {
@@ -16,4 +22,32 @@ img{
 }
 figure{
   width: 20%;
+}
+
+header {
+  display: flex;
+  
+}
+
+ul{
+list-style: none;
+
+}
+
+a{
+  text-decoration: none;
+}
+
+.boton-index{
+  display: flex;
+  flex-direction: column;
+border-radius: 5px;
+border: 2px solid rgb(93, 0, 255);
+  margin-top: 20%;
+  margin-left: 2%;
+  font-size: 40px;
+background-color: aqua;
+height: 100px;
+width: 100px;
+
 }
